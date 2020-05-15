@@ -1,6 +1,8 @@
 <?php
 namespace app\index\controller;
 
+use think\Config;
+
 class Index
 {
     public function index()
@@ -9,6 +11,8 @@ class Index
     }
 
     public function demo() {
+      $config = Config::get();
+      dump($config);
       return "<h1>demo</h1>";
     }
 }

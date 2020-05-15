@@ -3,6 +3,7 @@ namespace app\wechat\controller;
 
 use think\Controller;
 use think\Request;
+use think\Config;
 
 class Index
 {
@@ -26,6 +27,21 @@ class Index
 
     public function demo()
     {
+        Config::load(CONF_PATH . '/wechat/extra/map.ini');
+        Config::load(CONF_PATH . '/wechat/name.php');
+        $config_content = '[wechat]
+            wechat_demo_1=val
+            wechat_demo_2=val';
+        // Config::parse($config_content, 'ini');
+        $config = Config::get();
+        dump($config);
         return '<h1>demo</h1>';
+    }
+
+    public function hello()
+    {
+        $config = Config::get();
+        dump($config);
+        return '<h1>Hello</h1>';
     }
 }
