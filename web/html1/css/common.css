@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-size: 14px;
+    color: #000;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6800;
+}
+
+p {
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+.space {
+    padding: 0 8px;
+}
+
+.page-content {
+    padding: 30px 0;
+}
+
+.more-button {
+    display: inline-block;
+    width: 144px;
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+/* 居中显示网页 1200px */
+.page-size {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 顶部区域 */
+.page-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+}
+
+
+/* logo */
+.site-logo {
+    width: 200px;
+    height: 90px;
+    background: url("../img/logo.png") no-repeat 0 0;
+    background-size: contain;
+}
+
+/* 右侧信息区 */
+.site-info {
+    width: 110px;
+    height: 90px;
+    background: url("../img/info.png") no-repeat 0 0;
+}
+
+/* 导航 */
+.site-nav {
+    display: flex;
+    font-size: 14px;
+}
+.site-nav li {
+    padding: 10px;
+}
+
+.site-nav li a {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-nav li.active a,
+.site-nav li a:hover {
+    color: #fff;
+    background: #fc677a;
+    text-decoration: none;
+}
+
+/* 子导航 */
+.site-sub-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.site-sub-nav .item {
+    height: 44px;
+    line-height: 44px;
+    flex: 0 0 140px;
+    padding: 0 5px;
+}
+
+.site-sub-nav .item a {
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.site-sub-nav .item a:hover {
+    background: #ff6800;
+    text-decoration: none;
+}
+
+
+/* banner */
+.site-banner {
+    width: 100%;
+    height: 650px;
+}
+
+.site-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.site-sub-banner {
+    height: 350px;
+    width: 100%;
+}
+
+/* 一级标题 */
+h1.site-title {
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1.site-title .before {
+    height: 84px;
+    font-size: 60px;
+}
+
+h1.site-title .text {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+/* 二级标题 */
+h2.site-title {
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+h2.site-title .text{
+    line-height: 40px;
+    padding: 10px 0;
+    font-size: 22px;
+    color: #333;
+}
+h2.site-title .info{
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* 三级标题 */
+h3.site-title {
+    padding-bottom: 10px;
+}
+
+h3.site-title .text{
+    font-size: 16px;
+    color: #333;
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+
+h3.site-title .memo{
+    line-height: 24px;
+    padding: 5px 0;
+    font-weight: normal;
+    color: #555;
+}
+
+/* footer */
+.page-footer {
+    padding: 20px 0;
+}
+
+.page-footer .qr-code {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.page-footer .qr-code .img {
+    width: 105px;
+    height: 106px;
+}
+
+.page-footer .qr-code .text {
+    font-size: 18px;
+    padding: 0 0 20px;
+}
+
+.page-footer .footer-nav {
+    margin-bottom: 20px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-footer .footer-nav .link {
+    color: #333;
+}
+
+.page-footer .footer-nav .link:hover {
+    color: #ff6800;
+}
+
+.page-footer .footer-copyright{
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+.page-footer .footer-copyright .item{
+    padding: 0 3px;
+}
+
+
+/* 分页 */
+.detail-page {
+    padding: 20px 0;
+}
+
+.detail-page li {
+    padding: 5px 0;
+}
+
+/* 回到顶部 */
+.page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 200px;
+    width: 50px;
+    height: 50px;
+    background: #fff url("../img/top.png") no-repeat center 0;
+    background-size: 26px !important;
+    text-align: center;
+    color: #999;
+    border: 1px solid #ddd;
+    padding-top: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.page-top:hover {
+    background: #ff6800 url("../img/top-hover.png") no-repeat center 0;
+    color: #fff;
+}
